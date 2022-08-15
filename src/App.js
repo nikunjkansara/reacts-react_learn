@@ -53,7 +53,7 @@ class App extends React.Component{
         <ClassComp />
         <ClassComp1 />
         <FunctionComp />
-        <Counter />
+        <Counter /> 
         <Click />
       </div>
       
