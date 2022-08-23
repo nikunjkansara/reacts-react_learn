@@ -11,6 +11,8 @@ import {ClassComp, ClassComp1} from './Component/ClassComp';
 import FunctionComp from './Component/FunctionComponent';
 import Click from './Component/Click';
 import Counter from './Component/Counter';
+import Clock from './Clock';
+import Conditional from './Conditional';
 
 function App1() {
   return (
@@ -55,6 +57,8 @@ class App extends React.Component{
         <FunctionComp />
         <Counter /> 
         <Click />
+        <Clock />
+        <Conditional />
       </div>
       
       
