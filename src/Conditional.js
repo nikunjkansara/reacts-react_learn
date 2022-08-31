@@ -7,16 +7,23 @@ export class Conditional extends Component {
         this.GuestGreeting = this.GuestGreeting.bind(this);
         this.state = {
             'status': false,
-            'message': 'Login'
+            'message': 'Login',
+            'btnTxt': ''
         };
     }
 
     UserGreeting = () => {
-        return <h1>UserGreeting</h1>;
+        console.log('UserGreeting');
+        this.setState({
+            'btnTxt': 'UserGreeting'
+        })
     }
 
     GuestGreeting = () => {
-        return <h1>GuestGreeting</h1>;
+        console.log('GuestGreeting');
+        this.setState({
+            'btnTxt': 'GuestGreeting'
+        })
     }
 
     Greeting = () => {
@@ -27,13 +34,13 @@ export class Conditional extends Component {
                 'status': false,
                 'message': 'Login'
             });
-            //return <this.UserGreeting />
+            {this.UserGreeting() }
         } else {
             this.setState({
                 'status': true,
                 'message': 'Login out'
             });
-            //return <this.GuestGreeting />
+            {this.GuestGreeting() }
         }
     }
 
@@ -41,7 +48,7 @@ export class Conditional extends Component {
         return (
             <div>
                 <p>{this.state.message}</p>
-                <button onClick={this.Greeting}> Click to change value {this.state.status}</button>
+                <button onClick={this.Greeting}> Click to change value {this.state.btnTxt}</button>
             </div>
         )
     }

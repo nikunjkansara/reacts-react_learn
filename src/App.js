@@ -13,6 +13,8 @@ import Click from './Component/Click';
 import Counter from './Component/Counter';
 import Clock from './Clock';
 import Conditional from './Conditional';
+import List from './Component/List';
+import Form from './Form/Form';
 
 function App1() {
   return (
@@ -59,9 +61,9 @@ class App extends React.Component{
         <Click />
         <Clock />
         <Conditional />
+        <List />
+        <Form />
       </div>
-      
-      
     );
   } 
 }
