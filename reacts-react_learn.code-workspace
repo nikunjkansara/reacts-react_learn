@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../theme/light-bootstrap-dashboard-react-master"
+		}
+	],
+	"settings": {}
+}

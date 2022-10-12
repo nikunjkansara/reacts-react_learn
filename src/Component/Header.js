@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
+import {Link} from 'react-router-dom';
 
 import {
   Container, Row, Col, Form, Input, Button, Navbar, Nav,
@@ -26,11 +27,20 @@ const Header = () => (
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Home</NavLink>
+                <NavLink className={({ isActive }) => {
+                    return isActive ? "font-weight-bold active" : "font-weight-bold";
+                  }} href="/home">Home</NavLink>
+                
               </NavItem>
               
               <NavItem className="d-flex align-items-center">
-                <NavLink className="font-weight-bold" href="/">Electronics</NavLink>
+                <NavLink className="font-weight-bold" href="/electronics">Electronics</NavLink>
+              </NavItem>
+
+              <NavItem className="d-flex align-items-center">
+                <NavLink className={({ isActive }) => {
+                    return isActive ? "font-weight-bold active" : "font-weight-bold";
+                  }} href="/about">About</NavLink>
               </NavItem>
               
               <UncontrolledDropdown className="d-flex align-items-center" nav inNavbar>
